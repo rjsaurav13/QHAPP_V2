@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 import 'package:qhapp//login.dart';
+import 'package:qhapp/log.dart';
 import 'package:qhapp/signup.dart';
 
 void main() {
@@ -29,25 +30,21 @@ class HomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height / 6,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets/welcome.png")
+                    )
+                ),
+              ),
               Column(
                 children: <Widget>[
-                  Text(
-                    "Welcome",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30,
-
-                    ),
-
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text("BackSlash Flutter provides extraordinary flutter tutorials. Do Subscribe! ",
+                  Text("Join our platform to search and apply for jobs that you love ",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.grey[700],
-                      fontSize: 15,
+                      fontSize: 20,
 
                     ),)
                 ],
@@ -56,7 +53,7 @@ class HomePage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 3,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets/welcome.png")
+                        image: AssetImage("assets/img.png")
                     )
                 ),
               ),
@@ -68,7 +65,7 @@ class HomePage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage1()));
 
                     },
                     // defining the shape
@@ -95,7 +92,7 @@ class HomePage extends StatelessWidget {
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
 
                     },
-                    color: Color(0xff0095FF),
+                    color: Color(0xd86200ff),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50)
                     ),
